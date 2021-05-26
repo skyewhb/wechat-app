@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "编辑发布信息",
+  "usingComponents": {
+    "van-field": "/dist/field/index",
+    "van-button": "/dist/button/index",
+    "van-row": "/dist/row/index",
+    "van-col": "/dist/col/index",
+    "van-dialog": "/dist/dialog/index"
+  }
+}

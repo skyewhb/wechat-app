@@ -1,0 +1,30 @@
+<!--pages/usr_post/usr_post.wxml-->
+<van-cell-group>
+
+  <van-field value="{{ projectName }}" required clearable label="项目名称" placeholder="请输入项目名称"
+    bind:click-icon="onClickIcon" bind:blur='onBlur' data-fieldName="projectName" />
+  <van-field required clearable label="专业方向" placeholder="请输入专业方向" bind:click-icon="onClickIcon" bind:blur='onBlur'
+    data-fieldName="orientation" />
+  <van-field required clearable label="项目要求" placeholder="请输入项目要求" bind:click-icon="onClickIcon" bind:blur='onBlur'
+    data-fieldName="request" />
+  <van-field required clearable label="项目周期" placeholder="请输入项目周期" bind:click-icon="onClickIcon" bind:blur='onBlur'
+    data-fieldName="period" />
+  <van-field required clearable label="详细信息" type="textarea" autosize placeholder="请输入项目详细信息"
+    bind:click-icon="onClickIcon" bind:blur='onBlur' data-fieldName="detail" />
+  <van-row>
+    <van-col offset="5" span="6">
+      <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="reset">
+        重置
+      </van-button>
+    </van-col>
+    <van-col offset="3" span="6">
+      <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="post">
+        发布
+      </van-button>
+    </van-col>
+  </van-row>
+  <van-dialog id="van-dialog" show="{{ show }}" show-cancel-button message="是否确认发布" bind:close="dialogClose" bind:confirm="dialogConfirm"/>
+
+
+
+</van-cell-group>

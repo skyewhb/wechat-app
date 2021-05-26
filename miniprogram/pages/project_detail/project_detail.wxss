@@ -1,0 +1,10 @@
+/* pages/project_detail/project_detail.wxss */
+.project_detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher_info{
+  display: flex;
+  flex-direction: column;
+}

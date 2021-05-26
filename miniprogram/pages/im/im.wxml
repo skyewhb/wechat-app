@@ -1,0 +1,9 @@
+<view class="container">
+<h1>{{openid}}</h1>
+
+  <view class="uploader">
+    <a catchtap="saveRoom" class="uploader-text" >
+      <text>进入聊天室</text>
+    </a>
+  </view>
+</view>

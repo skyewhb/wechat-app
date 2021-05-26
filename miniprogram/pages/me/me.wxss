@@ -1,0 +1,47 @@
+/* pages/me/me.wxss */
+
+.info {
+  display:flex;
+  flex-flow: column;
+  margin-top: 24rpx;
+  margin-left: 10rpx;
+  width: 730rpx;
+  height: 240rpx;
+  background-color: #4d83f8;
+  font-size: 30rpx;
+  box-shadow: 0 0 16rpx 0 rgba(36,44,69,0.20);
+  border-radius: 8rpx;
+}
+
+.amountBg {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #5495e6;
+  align-items: center;
+}
+
+.img {
+  overflow: hidden;
+  display: block;
+  margin-left: 20px;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+}
+
+.account {
+  width: 70%;
+  color: #fff;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.nick-name{
+  font-family: 'Mcrosoft Yahei';
+  font-size: 16px;
+}
+
+.address{
+  font-size: 13px;
+}

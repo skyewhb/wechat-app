@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/library/library",
+    "pages/project_detail/project_detail",
+    "pages/library_project_detail/library_project_detail",
+    "pages/teacher_detail/teacher_detail",
+    "pages/student_detail/student_detail",
+    "pages/im/im",
+    "pages/project_detail/room/room",
+    "pages/me/me",
+    "pages/me/info",
+    "pages/me/released",
+    "pages/usr_post/usr_post"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "whb",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/image/home.png",
+        "selectedIconPath": "pages/image/home-active.png"
+      },
+      {
+        "pagePath": "pages/library/library",
+        "text": "库",
+        "iconPath": "pages/image/base.png",
+        "selectedIconPath": "pages/image/base-active.png"
+      },
+      {
+        "pagePath": "pages/usr_post/usr_post",
+        "text": "发布",
+        "iconPath": "pages/image/publish.png",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "pages/image/message.png",
+        "selectedIconPath": "pages/image/message-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/image/me.png",
+        "selectedIconPath": "pages/image/me-active.png"
+      }
+    ]
+  }
+
+}

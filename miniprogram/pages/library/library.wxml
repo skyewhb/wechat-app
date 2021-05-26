@@ -1,0 +1,21 @@
+<!--pages/library/library.wxml-->
+<van-tabs animated bind:change="tabClick">
+  <van-tab wx:for="{{tabs}}" wx:key="index" title="{{item}}"></van-tab>
+</van-tabs>
+<view class="projectinfo" wx:for-items="{{project_data}}" wx:key="id" wx:if="{{activeIndex == 0}}" bindtap="click_project" data-info="{{item}}">
+  <view class="profile">项目名称:{{item.name}}</view>
+  <view class="profile">研究方向:{{item.Work_Orientation}}</view>
+  <view class="profile">详细信息:{{item.Detail_Information}}</view>
+</view>
+
+<view class="projectinfo" wx:for-items="{{project_data}}" wx:key="id" wx:if="{{activeIndex == 1}}" bindtap="click_teacher" data-info="{{item}}">
+  <view class="profile">导师姓名:{{item.Name}}</view>
+  <view class="profile">研究方向:{{item.Major}}</view>
+  <view class="profile">个人简介: {{item.Personal_Introduction}}</view>
+</view>
+
+<view class="projectinfo" wx:for-items="{{project_data}}" wx:key="id" wx:if="{{activeIndex == 2}}" bindtap="click_student" data-info="{{item}}">
+  <view class="profile">姓名:{{item.name}}</view>
+  <view class="profile">学号:{{item.student_id}}</view>
+  <view class="profile">学院:{{item.apartment}}</view>
+</view>

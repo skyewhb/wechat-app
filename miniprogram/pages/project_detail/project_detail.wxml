@@ -1,0 +1,38 @@
+<!--pages/project_detail/project_detail.wxml-->
+<view>
+
+  <view class="teacher_info" wx:for="{{teacher}}">
+    <view>
+     教师姓名：{{item.Name}} 
+    </view>
+    <view>
+      研究方向：{{item.Major}} 
+    </view>
+  </view>
+
+  <view class="project_detail">
+    <view>
+      <view>
+        项目名称：{{detail.Detail_Information}} 
+      </view>
+      <view>
+        项目要求：{{detail.Limitation}}
+      </view>
+      <view>
+        项目时长：{{detail.Project_Time}}
+      </view>
+      <view>
+        研究方向：{{detail.Work_Orientation}} 
+      </view>
+      <view>
+        工作时间：{{detail.Work_Time}}
+      </view> 
+  </view>
+</view>
+
+
+<a catchtap="saveRoom" class="uploader-text" >
+  <text>联系他 </text>
+</a>
+
+</view>

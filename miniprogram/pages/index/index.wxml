@@ -1,0 +1,72 @@
+<view>
+  <view>
+
+    <view class='logo'>
+      <text>这里是皇帝的logo</text>
+    </view>
+
+
+    <view class="switch_title">
+      <view class="switch_tab">
+        <view wx:for="{{switch_list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}'
+          bindtap="selected">{{item}}
+          <view class="{{selected==index?'switch_underline':''}}">
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{selected == 0}}">
+
+        <view  class="project" wx:for="{{dataArray}}" bindtap="goDetail" data-id="{{item._id}}">
+          <!-- 这里是头像 -->
+          <view class="project-head">
+            <view>
+              <image src="/pages/image/poca.jpg" style="height:22px;width:22px" /> <text style="font-size : 14px;color:#888888">{{item.Teacher}}</text>
+            </view>
+            <!-- 这里是标题 -->
+            <view class="project-title">
+              <text style="font-size:17px;color:#353535">{{item.Detail_Information}}</text>
+            </view>
+            <!-- 这里是内容 -->
+            <view class="project-content">
+              <image src="{{item.Img}}" class="Img"></image>
+            </view>
+            <!-- 这里是落款 -->
+            <view class="project-buttom">
+              <text style="font-size : 14px;color:#888888">{{item.Work_Orientation}}</text>
+              <text style="font-size : 14px;color:#888888">{{item.Published_Time}}</text>
+              <text style="font-size : 14px;color:#888888">浏览量：{{item.Page_View}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+      <view wx:if="{{selected == 1}}">
+        <view  class="project" wx:for="{{dataArray}}" bindtap="goDetail" data-id="{{item._id}}">
+          <!-- 这里是头像 -->
+          <view class="project-head">
+            <view>
+              <image src="/pages/image/poca.jpg" style="height:22px;width:22px" /> <text style="font-size : 14px;color:#888888">{{item.Teacher}}</text>
+            </view>
+            <!-- 这里是标题 -->
+            <view class="project-title">
+              <text style="font-size:17px;color:#353535">{{item.Detail_Information}}</text>
+            </view>
+            <!-- 这里是内容 -->
+            <view class="project-content">
+              <image src="{{item.Img}}" class="Img"></image>
+            </view>
+            <!-- 这里是落款 -->
+            <view class="project-buttom">
+              <text style="font-size : 14px;color:#888888">{{item.Work_Orientation}}</text>
+              <text style="font-size : 14px;color:#888888">{{item.Published_Time}}</text>
+              <text style="font-size : 14px;color:#888888">浏览量：{{item.Page_View}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+</view>
