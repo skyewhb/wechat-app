@@ -1,18 +1,45 @@
-// pages/me/info.js
+// pages/register/register.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    openid:""
+    show: 'true'
   },
 
+  teacher(event) {
+    this.setData({
+      show: false
+    })
+    wx.navigateTo({
+      url: "/pages/register/teacher",
+    })
+  },
+
+  student(event) {
+    this.setData({
+      show: false
+    })
+    wx.navigateTo({
+      url: "/pages/register/student",
+    })
+  },
+
+  changeData: function () {
+
+    this.onLoad(); //最好是只写需要刷新的区域的代码，onload也可，效率低，有点low
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      show: "true"
+    })
+    console.log("注册选择页")   
+  
   },
 
   /**
@@ -26,7 +53,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.onLoad();
   },
 
   /**

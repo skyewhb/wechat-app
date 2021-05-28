@@ -1,23 +1,25 @@
-// pages/usr_post/usr_post.js
+// pages/register/teacher.js
 var app = getApp();
-
 Page({
-  // 判断是否已注册 注册->可以发，没注册->page.register
+
   /**
    * 页面的初始数据
    */
   data: {
-    projectName: '',
-    orientation: '',
-    request: '',
-    period: '',
-    detail: '',
+    name: '',
+    major: '',
+    introduction: '',
+    else: '',
     openid: '',
-    page_view: 0,
+    contact: '',
+    url: '',
+    identity: 'teacher',
     show: false,
-    show_reg: false
   },
 
+  /**
+   * 生命周期函数--监听页面加载
+   */
   onBlur(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
@@ -28,7 +30,6 @@ Page({
     data[fieldName] = val
     this.setData(data)
   },
-
   onClick(event) {
     this.setData({
       show: true
@@ -37,20 +38,6 @@ Page({
     console.log(this.data.orientation)
     console.log(this.data.detail)
   },
-
-  dateFormat: function (date) { //author: meizz   
-
-    var year = date.getFullYear()
-    var month = date.getMonth() + 1
-    var day = date.getDate()
-    var hour = date.getHours()
-    var minutes = date.getMinutes()
-    var seconds = date.getSeconds()
-    var realMonth = month > 9 ? month : "0" + month
-    return year + "-" + realMonth + "-" + day + " " + hour + ":" + minutes + ":" + seconds
-
-  },
-
   dialogClose(event) {
     this.setData({
       show: false
@@ -58,54 +45,51 @@ Page({
   },
 
   dialogConfirm(event) {
-    var date = this.dateFormat(new Date())
-    console.log(date)
     this.setData({
       show: false
     })
     wx.cloud.callFunction({
-        name: "usrpost",
+        name: "addTeacher",
         data: {
-          projectName: this.data.projectName,
-          orientation: this.data.orientation,
-          request: this.data.request,
-          period: this.data.period,
-          detail: this.data.detail,
+          name: this.data.name,
+          major: this.data.major,
+          introduction: this.data.introduction,
+          else: this.data.else,
           openid: this.data.openid,
-          date: date,
-          page_view: 0
+          contact: this.data.contact,
         }
       })
       .then(res => {
-        console.log("调用usrpost成功", res)
+        console.log("调用addteacher成功", res)
       }).catch(console.error)
-      wx.navigateTo({
-        url: "/pages/library/library",
-      })
-  },
 
-  dialogClose_reg(event) {
-    this.setData({
-      show_reg: false
-    })
-    wx.navigateTo({
+    wx.cloud.callFunction({
+        name: "addUser",
+        data: {
+          name: this.data.name,
+          url: this.data.url,
+          openid: this.data.openid,
+          identity: this.data.identity,
+        }
+      })
+      .then(res => {
+        wx.showToast({
+          title: "注册成功",
+          icon: 'success', //图标，支持"success"、"loading"
+        })
+        console.log("调用addUser成功", res)
+      }).catch(console.error)
+
+    wx.switchTab({
       url: "/pages/index/index",
     })
+    console.log("跳转")
+
   },
 
-  dialogConfirm_reg(event) {
-    this.setData({
-      show_reg: false
-    })
-      wx.navigateTo({
-        url: "/pages/register/register",
-      })
-     
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad: function (options) {
+    let that = this
     wx.cloud.callFunction({
         name: "login"
       })
@@ -116,23 +100,13 @@ Page({
         })
       })
       .catch(console.error)
-    //判断是否登陆
-    wx.cloud.callFunction({
-        name: "isUser",
-        data: {
-          openid: this.data.openid
-        }
-      })
-      .then(res => {
-        console.log("用户登陆状态：", res.result.data.length)
-        if (res.result.data.length == 0){
-          //跳转至注册
-          this.setData({
-            show_reg: true
-          })
-        }
-      })
-      .catch(console.error)
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          url: res.userInfo.avatarUrl
+        })
+      }
+    })
   },
 
   /**
@@ -145,9 +119,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏

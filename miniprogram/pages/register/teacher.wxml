@@ -1,0 +1,20 @@
+<!--pages/register/student.wxml-->
+<van-field required clearable label="姓名" placeholder="请输入您的姓名" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="name" />
+<van-field required clearable label="研究方向" placeholder="请输入研究方向" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="major" />
+<van-field required clearable label="联系方式" placeholder="xxxxx@xxxx.com" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="contact" />
+<van-field required clearable label="个人介绍" type="textarea" autosize placeholder="请输入个人介绍" bind:click-icon="onClickIcon"
+  bind:blur='onBlur' data-fieldName="introduction" />
+<van-field required clearable label="其他" type="textarea" autosize placeholder="其他" bind:click-icon="onClickIcon"
+  bind:blur='onBlur' data-fieldName="else" />
+<van-row>
+
+  <van-col offset="10" span="6">
+    <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="post">
+      注册
+    </van-button>
+  </van-col>
+</van-row>
+<van-dialog id="van-dialog" show="{{ show }}" show-cancel-button message="是否确认信息无误" bind:close="dialogClose" confirmButtonText="注册" bind:confirm="dialogConfirm"/>

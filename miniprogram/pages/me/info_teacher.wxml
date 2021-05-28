@@ -1,0 +1,8 @@
+<!--pages/teacher_detail/teacher_detail.wxml-->
+<view class="projectinfo">
+  <view class="profile">导师姓名：{{teacher.Name}}</view>
+  <view class="profile">研究方向: {{teacher.Major}}</view>
+  <view class="profile">联系方式: {{teacher.contact}}</view>
+  <view class="profile">个人简介: {{teacher.Personal_Introduction}}</view>
+  <view class="profile">其他信息: {{teacher.else}}</view>
+</view>

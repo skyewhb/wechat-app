@@ -12,18 +12,15 @@
   <van-field required clearable label="详细信息" type="textarea" autosize placeholder="请输入项目详细信息"
     bind:click-icon="onClickIcon" bind:blur='onBlur' data-fieldName="detail" />
   <van-row>
-    <van-col offset="5" span="6">
-      <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="reset">
-        重置
-      </van-button>
-    </van-col>
-    <van-col offset="3" span="6">
+    
+    <van-col offset="10" span="6">
       <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="post">
         发布
       </van-button>
     </van-col>
   </van-row>
   <van-dialog id="van-dialog" show="{{ show }}" show-cancel-button message="是否确认发布" bind:close="dialogClose" bind:confirm="dialogConfirm"/>
+  <van-dialog id="van-dialog" show="{{ show_reg }}" show-cancel-button message="您尚未注册，是否前去注册" bind:close="dialogClose_reg" bind:confirm="dialogConfirm_reg"/>
 
 
 

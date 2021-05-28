@@ -1,0 +1,21 @@
+/* pages/me/info_student.wxss */
+
+.projectinfo {
+  display:flex;
+  flex-flow: column;
+
+  margin-top: 24rpx;
+  margin-left: 24rpx;
+  font-size: 30rpx;
+}
+.projectinfo .profile {
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  display: flex;
+
+}
+
+.projectinfo .profile .name {
+  display: flex;
+  margin-top: 32rpx;
+}

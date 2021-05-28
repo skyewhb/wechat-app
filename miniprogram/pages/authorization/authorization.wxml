@@ -1,0 +1,13 @@
+<!--pages/authorization/authorization.wxml-->
+<!-- 展示用户头像昵称 | 使用 <open-data /> 组件 -->
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+
+<!-- 使用 button 来授权登录 -->
+<button
+  open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo"
+>
+  授权登录
+</button>
+

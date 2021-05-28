@@ -7,6 +7,9 @@ cloud.init({
 const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let res = await db.collection('Teachers').where({_openid: event.userInfo.openId}).get()
-   return res
+  let res = await db.collection('User').where({_openid: event.userInfo.openId}).get()
+ // let res = await db.collection('User').where({
+    //_openid: "11"
+ // }).get()
+  return res
 }

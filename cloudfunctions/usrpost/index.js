@@ -16,6 +16,7 @@ exports.main = async (event, context) => {
       Project_Time: event.period,
       Detail_Information: event.detail,
       Published_Time: event.date,
+      Page_View: event.page_view,
       _openid: event.openid
     }
    })

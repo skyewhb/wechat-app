@@ -1,0 +1,2 @@
+<!--pages/register/register.wxml-->
+<van-dialog theme = "round-button" id="van-dialog" show="{{ show }}" show-cancel-button message="您的身份是" confirmButtonText="学生" cancelButtonText="教师" bind:close="teacher" bind:confirm="student"/>

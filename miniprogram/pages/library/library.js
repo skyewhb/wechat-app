@@ -58,19 +58,19 @@ Page({
   click_project: function (e) {
     console.log("点击了项目库，访问详情页", e.currentTarget.dataset.info._id)
     wx.navigateTo({
-      url:'/pages/project_detail/project_detail?id='+e.currentTarget.dataset.info._id
+      url:'/pages/library/project_detail/project_detail?id='+e.currentTarget.dataset.info._id
     })
   },
   click_teacher: function (e) {
     console.log("点击了导师库，访问详情页", e.currentTarget.dataset.info._id)
     wx.navigateTo({
-      url:'/pages/teacher_detail/teacher_detail?id='+e.currentTarget.dataset.info._id
+      url:'/pages/library/teacher_detail/teacher_detail?id='+e.currentTarget.dataset.info._id
     })
   },
   click_student: function (e) {
     console.log("点击了学生库，访问详情页", e.currentTarget.dataset.info._id)
     wx.navigateTo({
-      url:'/pages/student_detail/student_detail?id='+e.currentTarget.dataset.info._id
+      url:'/pages/library/student_detail/student_detail?id='+e.currentTarget.dataset.info._id
     })
   },
   /**

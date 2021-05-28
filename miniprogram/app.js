@@ -18,6 +18,8 @@ App({
       index: 3,
       text: '0',
     })
-    this.globalData = {}
+    this.globalData = {
+      userinfo: ''
+    }
   }
 })

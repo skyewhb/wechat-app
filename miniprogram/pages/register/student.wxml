@@ -1,0 +1,20 @@
+<!--pages/register/student.wxml-->
+<van-field required clearable label="姓名" placeholder="请输入您的姓名" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="name" />
+<van-field required clearable label="学院" placeholder="请输入您的学院" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="apartment" />
+<van-field required clearable label="学号" placeholder="请输入您的学号" bind:click-icon="onClickIcon" bind:blur='onBlur'
+  data-fieldName="student_id" />
+<van-field required clearable label="技能介绍" type="textarea" autosize placeholder="#python.." bind:click-icon="onClickIcon"
+  bind:blur='onBlur' data-fieldName="skill" />
+<van-field required clearable label="其他" type="textarea" autosize placeholder="项目经验, 获奖情况..." bind:click-icon="onClickIcon"
+  bind:blur='onBlur' data-fieldName="else" />
+<van-row>
+
+  <van-col offset="10" span="6">
+    <van-button square type="primary" type="primary" size="normal" bind:click="onClick" data-buttonName="post">
+      注册
+    </van-button>
+  </van-col>
+</van-row>
+<van-dialog id="van-dialog" show="{{ show }}" show-cancel-button message="是否确认信息无误" bind:close="dialogClose" confirmButtonText="注册" bind:confirm="dialogConfirm"/>

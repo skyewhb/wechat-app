@@ -47,6 +47,30 @@
           "pathName": "pages/project_detail/project_detail",
           "query": "id=79550af260a5c6de182f7eb4375d6d06",
           "scene": null
+        },
+        {
+          "name": "pages/authorization/authorization",
+          "pathName": "pages/authorization/authorization",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "注册选择",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/register/student",
+          "pathName": "pages/register/student",
+          "query": "",
+          "scene": null
         }
       ]
     }
