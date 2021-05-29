@@ -19,7 +19,10 @@ App({
       text: '0',
     })
     this.globalData = {
-      userinfo: ''
     }
+  },
+  async hasUserInfo() {
+    if (this.globalData.userInfo && this.globalData.userInfo.nickName && this.globalData.userInfo.avatarUrl) return true
+
   }
 })

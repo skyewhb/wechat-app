@@ -61,6 +61,7 @@ Page({
           this.setData({
             identity: res.result.data[0].identity
           })
+          console.log("已注册，是",this.data.identity)
         }
       })
       .catch(console.error)

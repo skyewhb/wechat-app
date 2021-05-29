@@ -11,6 +11,7 @@
     data-fieldName="period" />
   <van-field required clearable label="详细信息" type="textarea" autosize placeholder="请输入项目详细信息"
     bind:click-icon="onClickIcon" bind:blur='onBlur' data-fieldName="detail" />
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="{{ true }}" />
   <van-row>
     
     <van-col offset="10" span="6">

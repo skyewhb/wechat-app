@@ -14,6 +14,7 @@ exports.main = async (event, context) => {
       Work_Orientation: event.orientation,
       request: event.request,
       Project_Time: event.period,
+      Img: event.url,
       Detail_Information: event.detail,
       Published_Time: event.date,
       Page_View: event.page_view,

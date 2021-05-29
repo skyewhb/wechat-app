@@ -44,7 +44,7 @@
         "pagePath": "pages/usr_post/usr_post",
         "text": "发布",
         "iconPath": "pages/image/publish.png",
-        "selectedIconPath": ""
+        "selectedIconPath": "pages/image/publish.png"
       },
       {
         "pagePath": "pages/message/message",

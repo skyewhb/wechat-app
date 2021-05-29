@@ -77,12 +77,14 @@ Page({
           title: "注册成功",
           icon: 'success', //图标，支持"success"、"loading"
         })
+        
         console.log("调用addUser成功", res)
       }).catch(console.error)
+      wx.switchTab({
+        url: "/pages/index/index",
+      })
 
-    wx.switchTab({
-      url: "/pages/index/index",
-    })
+    
     console.log("跳转")
 
   },

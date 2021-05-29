@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    fileList: [],
     projectName: '',
     orientation: '',
     request: '',
@@ -37,7 +38,70 @@ Page({
     console.log(this.data.orientation)
     console.log(this.data.detail)
   },
+  uploadToCloud() {
+    wx.cloud.init();
+    const {
+      fileList
+    } = this.data;
+    if (!fileList.length) {
+      wx.showToast({
+        title: '请选择图片',
+        icon: 'none'
+      });
+    } else {
+      const uploadTasks = fileList.map((file, index) => this.uploadFilePromise(`my-photo${index}.png`, file));
+      Promise.all(uploadTasks)
+        .then(data => {
+          wx.showToast({
+            title: '上传成功',
+            icon: 'none'
+          });
+          const newFileList = data.map(item => {
+            url: item.fileID
+          });
+          this.setData({
+            cloudPath: data,
+            fileList: newFileList
+          });
+        })
+        .catch(e => {
+          wx.showToast({
+            title: '上传失败',
+            icon: 'none'
+          });
+          console.log(e);
+        });
+    }
+  },
 
+  uploadFilePromise(fileName, chooseResult) {
+    return wx.cloud.uploadFile({
+      cloudPath: fileName,
+      filePath: chooseResult.url
+    });
+  },
+
+  afterRead(event) {
+    const { file } = event.detail;
+    console.log(app.globalData.userInfo)
+    // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
+    wx.cloud.uploadFile({
+      cloudPath: 'profile_img/' + this.data.projectName, 
+      filePath: file.url,
+      success(res) {
+        // 上传完成需要更新 fileList
+        console.log('已上传',res)
+        this.setData({
+          url: res.fileID
+        })
+        const { fileList = [] } = this.data;
+        fileList.push({ ...file, url: res.data });
+        this.setData({ fileList });
+      },fail(res){
+        console.log(res)
+      }
+    });
+  },
   dateFormat: function (date) { //author: meizz   
 
     var year = date.getFullYear()
@@ -72,6 +136,7 @@ Page({
           period: this.data.period,
           detail: this.data.detail,
           openid: this.data.openid,
+          url : this.data.url,
           date: date,
           page_view: 0
         }
@@ -79,9 +144,9 @@ Page({
       .then(res => {
         console.log("调用usrpost成功", res)
       }).catch(console.error)
-      wx.navigateTo({
-        url: "/pages/library/library",
-      })
+    wx.navigateTo({
+      url: "/pages/library/library",
+    })
   },
 
   dialogClose_reg(event) {
@@ -97,10 +162,10 @@ Page({
     this.setData({
       show_reg: false
     })
-      wx.navigateTo({
-        url: "/pages/register/register",
-      })
-     
+    wx.navigateTo({
+      url: "/pages/register/register",
+    })
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -125,7 +190,7 @@ Page({
       })
       .then(res => {
         console.log("用户登陆状态：", res.result.data.length)
-        if (res.result.data.length == 0){
+        if (res.result.data.length == 0) {
           //跳转至注册
           this.setData({
             show_reg: true
