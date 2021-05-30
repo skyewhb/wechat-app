@@ -1,10 +1,96 @@
 /* pages/project_detail/project_detail.wxss */
-.project_detail{
+.project_detail1{
+  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 140rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  border-bottom:1px solid #a43ce9;
+  align-items: center;
+  justify-content: center;
 }
 
 .teacher_info{
   display: flex;
-  flex-direction: column;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+  border-bottom:1px solid #a43ce9;
 }
+
+.teacher_head{
+  height: 160rpx;
+  display: flex;
+  margin-bottom:30rpx;
+  margin-left:80rpx;
+  padding:5rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher_content{
+  height: 160rpx;
+  margin-top:5rpx;
+  margin-left:10rpx;
+  margin-bottom:5rpx;
+  letter-spacing:5rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+  /* 上下居中 */
+  justify-content: center;
+  /* 左右居中 */
+  text-align: left;
+}
+
+.project_detail2{
+  height: 280rpx;
+  width: 100%;
+  letter-spacing:5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.request{
+  margin-top:30rpx;
+  margin-bottom:40rpx;
+}
+
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.work{
+  width: 250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.limit{
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left:1px solid #a43ce9;
+  border-right:1px solid #a43ce9;
+}
+
+.project{
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
