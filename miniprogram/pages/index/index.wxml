@@ -1,11 +1,5 @@
 <view>
   <view>
-
-    <view class='logo'>
-      <text>这里是皇帝的logo</text>
-    </view>
-
-
     <view class="switch_title">
       <view class="switch_tab">
         <view wx:for="{{switch_list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}'
@@ -28,7 +22,7 @@
             </view>
             <!-- 这里是内容 -->
             <view class="project-content">
-              <image src="{{item.Img}}" class="Img"></image>
+              <!-- <image src="{{item.Img}}" class="Img"></image> -->
             </view>
             <!-- 这里是落款 -->
             <view class="project-buttom">
@@ -54,7 +48,7 @@
             </view>
             <!-- 这里是内容 -->
             <view class="project-content">
-              <image src="{{item.Img}}" class="Img"></image>
+          <!--     <image src="{{item.Img}}" class="Img"></image> -->
             </view>
             <!-- 这里是落款 -->
             <view class="project-buttom">
@@ -65,8 +59,6 @@
           </view>
         </view>
       </view>
-
-
     </view>
   </view>
 </view>

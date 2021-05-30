@@ -1,5 +1,18 @@
 /* pages/authorization/authorization.wxss */
-.login{height: 100vh; text-align: center; padding-top:200rpx;}
-.login image{ width:400rpx;}
-.btnGroup{ padding-top:100rpx;}
-.btnGroup button{ margin-bottom:30rpx;}
+.login{
+  height: 100vh; 
+  text-align: center; 
+  padding-top:200rpx;
+}
+
+.login image{ 
+  width:400rpx;
+}
+
+.btnGroup{ 
+  padding-top:100rpx;
+}
+
+.btnGroup button{ 
+  margin-bottom:30rpx;
+}

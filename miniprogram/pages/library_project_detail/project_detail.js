@@ -1,18 +1,29 @@
-// pages/me/released.js
+// pages/project_detail/project_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    projecrt: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //读数据库根据id 显示
+    var id = options.id
+    wx.cloud.database().collection('Projects')
+      .doc(id)
+      .get()
+      .then(res => {
+        this.setData({
+          project: res.data
+        })
+        console.log("详情页面", res.data)
+      })
+      .catch(console.error)
   },
 
   /**

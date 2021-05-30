@@ -1,4 +1,4 @@
-// pages/me/released.js
+// pages/library_project_detail/library_project_detail.js
 Page({
 
   /**

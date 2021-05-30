@@ -1,38 +1,46 @@
 <!--pages/project_detail/project_detail.wxml-->
 <view>
 
-  <view class="teacher_info" wx:for="{{teacher}}">
+  <view class="project_detail1">
     <view>
-     教师姓名：{{item.Name}} 
+      <text style="font-size : 16px;color:black">项目名称：{{detail.Detail_Information}}</text>
     </view>
-    <view>
-      研究方向：{{item.Major}} 
+  </view>
+  <view class="teacher_info">
+    <view class="teacher_head">
+      <image src="/pages/image/poca.jpg" style="height:40px;width:40px" />
+      <view class="teacher_content">
+        <view class="teacher_name">
+          教师姓名：{{teacher[0].Name}}
+        </view>
+        <view class="teacher_major">
+          研究方向：{{teacher[0].Major}}
+        </view>
+      </view>
     </view>
   </view>
 
-  <view class="project_detail">
-    <view>
-      <view>
-        项目名称：{{detail.Detail_Information}} 
+  <view class="project_detail2">
+    <view class="request">要求</view>
+    <view class="box">
+      <view class="work">
+        <text style="font-size : 14px;color:#888888">工作时长</text>
+        {{detail.Work_Time}}
       </view>
-      <view>
-        项目要求：{{detail.Limitation}}
+      <view class="limit">
+        <text style="font-size : 14px;color:#888888">学历</text>
+        {{detail.Limitation}}
       </view>
-      <view>
-        项目时长：{{detail.Project_Time}}
+      <view class="project">
+        <text style="font-size : 14px;color:#888888">项目周期</text>
+        {{detail.Project_Time}}
       </view>
-      <view>
-        研究方向：{{detail.Work_Orientation}} 
-      </view>
-      <view>
-        工作时间：{{detail.Work_Time}}
-      </view> 
+    </view>
   </view>
-</view>
 
 
-<a catchtap="saveRoom" class="uploader-text" >
-  <text>联系他 </text>
-</a>
+  <view class="lianxi" catchtap="saveRoom" class="uploader-text">
+    <text>联系他 </text>
+  </view>
 
 </view>

@@ -14,10 +14,11 @@
   </view>
 </view>
 <van-dialog id="van-dialog" show="{{ show }}" show-cancel-button message="您尚未注册，是否前去注册" bind:close="dialogClose_reg" bind:confirm="dialogConfirm_reg"/>
-<van-grid> 
-  <van-grid-item icon="photo-o" bind:click="goInfo" text="我的信息" />
-  <van-grid-item icon="photo-o" bind:click="goReleased" text="我的发布" />
-  <van-grid-item icon="photo-o" link-type="navigateTo" url="/pages/me/about" text="关于" />
-  <van-grid-item icon="photo-o" link-type="navigateTo" url="/pages/me/contact" text="联系我们" />
+<view class="me">
+  <van-grid> 
+  <van-grid-item class="my_info" icon="photo-o" bind:click="goInfo" text="我的信息" />
+  <van-grid-item class="my_pub" icon="photo-o" link-type="navigateTo" url="/pages/me/released" text="我的发布" />
 </van-grid>
+</view>
+
 

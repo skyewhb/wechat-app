@@ -1,0 +1,8 @@
+<!--pages/student_detail/student_detail.wxml-->
+<view class="projectinfo">
+  <view class="profile">姓名：{{project.name}}</view>
+  <view class="profile">学号: {{project.student_id}}</view>
+  <view class="profile">学院: {{project.apartment}}</view>
+  <view class="profile">专业技能: {{project.skill}}</view>
+  <view class="profile">详细信息: {{project.else}}</view>
+</view>
