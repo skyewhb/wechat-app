@@ -1,0 +1,9 @@
+<!--pages/project_detail/project_detail.wxml-->
+<view class="projectinfo">
+  <view class="profile">项目名称：{{project.name}}</view>
+  <view class="profile">研究方向: {{project.Work_Orientation}}</view>
+  <view class="profile">学历要求: {{project.Limitation}}</view>
+  <view class="profile">项目时限: {{project.Project_Time}}</view>
+  <view class="profile">工作时间: {{project.Work_Time}}</view>
+  <view class="profile">详细信息: {{project.Detail_Information}}</view>
+</view>
