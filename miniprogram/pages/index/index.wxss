@@ -22,13 +22,13 @@
 .hidden{
   line-height: 100rpx;
   text-align: center;
-  color: #a43ce9;
+  color: blue;
   flex: 1;
   font-size: 28rpx;
 }
 
 .switch_underline{
-  background: #a43ce9;
+  background: blue;
   width: 54rpx;
   height: 8rpx;
   margin-top: -20rpx;

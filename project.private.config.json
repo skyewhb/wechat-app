@@ -1,0 +1,78 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "库页面",
+          "pathName": "pages/library/library",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布页面",
+          "pathName": "pages/usr_post/usr_post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的页面",
+          "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/project_detail/project_detail",
+          "pathName": "pages/project_detail/project_detail",
+          "query": "id=79550af260a5c6de182f7eb4375d6d06",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/authorization",
+          "pathName": "pages/authorization/authorization",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "注册选择",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/register/student",
+          "pathName": "pages/register/student",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

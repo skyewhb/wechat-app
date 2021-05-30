@@ -1,15 +1,15 @@
 /* pages/me/me.wxss */
 
 .info {
-  display: flex;
+  display:flex;
   flex-flow: column;
   margin-top: 24rpx;
   margin-left: 10rpx;
   width: 730rpx;
   height: 240rpx;
-  background-color: #a43ce9;
+  background-color: #4d83f8;
   font-size: 30rpx;
-  box-shadow: 0 0 16rpx 0 rgba(36, 44, 69, 0.20);
+  box-shadow: 0 0 16rpx 0 rgba(36,44,69,0.20);
   border-radius: 8rpx;
 }
 
@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: row;
   height: 100px;
-  background-color: #7fc0eb;
+  background-color: #5495e6;
   align-items: center;
 }
 
@@ -37,35 +37,11 @@
   align-items: center;
 }
 
-.nick-name {
+.nick-name{
   font-family: 'Mcrosoft Yahei';
   font-size: 16px;
 }
 
-.address {
+.address{
   font-size: 13px;
-}
-
-.my_info {
-  display:flex;
-  margin-top: 24rpx;
-  margin-left: 24rpx;
-  font-size: 30rpx;
-  color: black;
-}
-
-.my_pub {
-  display:flex;
-  margin-top: 24rpx;
-  margin-left: 24rpx;
-  font-size: 30rpx;
-  color: black;
-}
-
-.me {
-  display:flex;
-  flex-flow: column;
-  margin-top: 150rpx;
-  margin-left: 100rpx;
-  font-size: 30rpx;
 }

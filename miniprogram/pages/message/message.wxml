@@ -1,19 +1,24 @@
 <!--pages/message/message.wxml-->
-<view class="message_index" bindtap="goMessageDetail" wx:for="{{another_info}}">
+<view class="message_index" bindtap="goMessageDetail" wx:for="{{message_list}}">
   <!-- 这里是头像 -->
   <view class="message-head">
     <!-- <image>{{item.avatar}}</image> -->
   </view>
-  <!-- 这里是昵称 -->
-  <view class="message-title">
-    <text style="font-size:17px;color:#353535">{{item.Name}}</text>
-    <text style="font-size : 14px;color:#888888">{{item.sendTime}}</text>
+  <view>
+    <!-- 这里是昵称 -->
+    <view class="message-title">
+      <text style="font-size:17px;color:#353535">{{item.nickName}}</text>
+      <text style="font-size : 14px;color:#888888">{{item.sendTime}}</text>
+    </view>
+    <!-- 这里是内容 -->
+    <view class="message-content">
+      <text style="font-size : 14px;color:#888888">{{item.textContent}}</text>
+    </view>
+    <!-- 这里是落款
+            <view class="message-buttom">
+              <text style="font-size : 14px;color:#888888">123</text>
+              <text style="font-size : 14px;color:#888888">123</text>
+              <text style="font-size : 14px;color:#888888">123</text>
+            </view> -->
   </view>
-</view>
-
-<!-- 这里是内容 -->
-<view class="message-content" wx:for="{{message_list}}">
-  <a data-groupid="{{item.groupId}}" catchtap="goMessageDetail">
-    <text style="font-size : 14px;color:#888888">{{item.textContent}}</text>
-  </a>
 </view>
