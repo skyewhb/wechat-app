@@ -6,15 +6,16 @@
   margin-top: 24rpx;
   margin-left: 24rpx;
   width: 702rpx;
-  height: 210rpx;
+  height: 230rpx;
   background-color: #FFFFFF;
   box-shadow: 0 0 16rpx 0 rgba(36,44,69,0.20);
   border-radius: 12rpx;
   font-size: 30rpx;
 }
 .projectinfo .profile {
-  margin-top: 10rpx;
-  margin-left: 20rpx;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
   display: flex;
 
 }

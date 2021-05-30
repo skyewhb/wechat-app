@@ -12,7 +12,7 @@ Page({
    */
   onLoad: function (options) {
     //读数据库根据id 显示
-    var id = options.id
+    var openid = options.openid
     wx.cloud.database().collection('Teachers')
       .where({_openid: openid})
       .get()

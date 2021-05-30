@@ -1,0 +1,4 @@
+<!--pages/me/about.wxml-->
+<view class="projectinfo">
+  <view class="profile">  本小程序基于微信云开发完成，主要致力于提供一个开放式平台，供老师，学生进行科研项目的交流。增加学生在本科时期参与科研项目的机会。</view>
+</view>
