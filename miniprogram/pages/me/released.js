@@ -5,25 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    project_data : []
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //读数据库根据id 显示
-    var openid = options.openid
-    wx.cloud.database().collection('Projects')
-      .where({_openid: openid})
-      .get()
-      .then(res => {
-        this.setData({
-          project_data: res.data
-        })
-        console.log("我的发布页面：", res.data)
-      })
-      .catch(console.error)
+
   },
 
   /**

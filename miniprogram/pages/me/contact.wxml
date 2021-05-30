@@ -1,5 +1,0 @@
-<!--pages/me/contact.wxml-->
-<view class="projectinfo">
-  <view class="profile">姓名：王淏博</view>
-  <view class="profile">联系邮箱：wanghaobocs@gmail.com</view>
-</view>

@@ -17,8 +17,6 @@
     "pages/me/info_teacher",
     "pages/me/info_student",
     "pages/me/released",
-    "pages/me/about",
-    "pages/me/contact",
     "pages/usr_post/usr_post"
   ],
   "window": {

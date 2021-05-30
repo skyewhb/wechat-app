@@ -1,5 +1,2 @@
-<view class="projectinfo" wx:for-items="{{project_data}}" wx:key="id" data-info="{{item}}">
-  <view class="profile">项目名称:{{item.name}}</view>
-  <view class="profile">研究方向:{{item.Work_Orientation}}</view>
-  <view class="profile">详细信息:{{item.Detail_Information}}</view>
-</view>
+<!--pages/me/released.wxml-->
+<text>pages/me/released.wxml</text>

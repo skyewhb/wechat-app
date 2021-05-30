@@ -14,7 +14,6 @@ Page({
     period: '',
     detail: '',
     openid: '',
-    url: '11',
     page_view: 0,
     show: false,
     show_reg: false
@@ -83,7 +82,6 @@ Page({
   },
 
   afterRead(event) {
-    let that = this
     const { file } = event.detail;
     console.log(app.globalData.userInfo)
     // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
@@ -93,10 +91,9 @@ Page({
       success(res) {
         // 上传完成需要更新 fileList
         console.log('已上传',res)
-        that.setData({
+        this.setData({
           url: res.fileID
         })
-        console.log(that.data.url)
         const { fileList = [] } = this.data;
         fileList.push({ ...file, url: res.data });
         this.setData({ fileList });
@@ -126,7 +123,7 @@ Page({
 
   dialogConfirm(event) {
     var date = this.dateFormat(new Date())
-    console.log(this.data.url)
+    console.log(date)
     this.setData({
       show: false
     })
@@ -147,7 +144,7 @@ Page({
       .then(res => {
         console.log("调用usrpost成功", res)
       }).catch(console.error)
-    wx.switchTab({
+    wx.navigateTo({
       url: "/pages/library/library",
     })
   },
@@ -156,7 +153,7 @@ Page({
     this.setData({
       show_reg: false
     })
-    wx.switchTab({
+    wx.navigateTo({
       url: "/pages/index/index",
     })
   },
@@ -214,7 +211,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.onLoad()
+
   },
 
   /**
